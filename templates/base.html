@@ -1,0 +1,117 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>home</title>
+ <!-- Bootstrap CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+ <link rel="stylesheet" href="{% static 'assets/css/navik-horizontal-default-menu.min.css' %}">
+ <!-- Navik navigation CSS -->
+ <link rel="shortcut icon" href="{% static 'assets/img/favicon.png' %}" type="image/x-icon" />
+
+ <!-- ************************* CSS Files ************************* -->
+ <!-- Vendor CSS -->
+ <link rel="stylesheet" href="{% static 'assets/css/bootstrap.css' %}">
+ <!-- Vendor CSS -->
+ <link rel="stylesheet" href="{% static 'assets/css/vendor.css' %}">
+ <!-- style css -->
+ <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0-10/css/fontawesome.css" />
+
+
+
+
+</head>
+<body>
+ <!-- Preloader Start -->
+ <div class="ft-preloader active">
+  <div class="ft-preloader-inner h-100 d-flex align-items-center justify-content-center">
+   <div class="ft-child ft-bounce1"></div>
+   <div class="ft-child ft-bounce2"></div>
+   <div class="ft-child ft-bounce3"></div>
+  </div>
+ </div>
+ <!-- Preloader End -->
+ <!-- Main Wrapper Start -->
+ <div class="wrapper">
+  <!-- Header Start -->
+  <header>
+   <div class="navik-header header-shadow">
+    <div class="container-fluid">
+
+     <!-- Navik header -->
+     <div class="navik-header-container">
+      <!--Logo-->
+      <div class="logo" data-mobile-logo="{% static 'assets/img/logo/logo_1.png' %}"
+       data-sticky-logo="demo/images/logo-dark.png">
+       <a href="#"><img src="{% static 'assets/img/logo/logo_1.png' %}" alt="logo" /></a>
+      </div>
+
+      <!-- Burger menu -->
+      <div class="burger-menu">
+       <div class="line-menu line-half first-line"></div>
+       <div class="line-menu"></div>
+       <div class="line-menu line-half last-line"></div>
+      </div>
+
+    <!--Navigation menu-->
+    <nav class="navik-menu menu-caret submenu-top-border submenu-scale">
+      <ul>
+    <li class="current-menu"><a href="{% url 'home' %}">Home</a></li>
+    <li class="current-menu"><a href="{% url 'about' %}">About</a></li>
+    <li class="current-menu"><a href="{% url 'create_event' %}">Complient</a></li>
+    <li class="current-menu"><a href="{% url 'compliant_status' %}">Complaint Status</a></li>
+    <li class="current-menu"><a href="/admin">Admin</a></li>
+    
+
+
+        <li><a href="{% url 'login' %}"><img src="{% static 'assets/img/icons/logout.png' %}" class="mt-5 pt-2" width="25px" height="25px" alt="eye"></a></li>
+       </ul>
+      </nav>
+     </div>
+    </div>
+   </div>
+
+<!-- header-start -->
+
+<!-- header-end -->
+
+  </header>
+  <!-- Header End -->
+ 
+  <main>
+   {% block content %}
+  
+   {% endblock %}
+  </main>
+
+  <!-- Main Wrapper End -->
+  <!-- Footer Start-->
+
+  <!-- Footer End-->
+
+  <!-- Global Overlay Start -->
+  <div class="global-overlay"></div>
+  <!-- Global Overlay End -->
+  <!-- Scrol To Top Start -->
+
+  <!-- Scrol To Top End -->
+ </div>
+ <!-- Main Wrapper End -->
+ <!-- ************************* JS Files ************************* -->
+ <!-- jQuery JS -->
+<script src="{% static 'assets/js/vendor.js' %}"></script>
+<!-- Main JS -->
+<script src="{% static 'assets/js/main.js' %}"></script>
+<script src="{% static 'assets/js/jquery-3.5.1.min.js' %}"></script> <!-- Navik navigation jQuery -->
+<script src="{% static 'assets/js/navik.menu.js' %}"></script> <!-- Navik navigation jQuery -->
+<script src="{% static 'assets/js/custom.js' %}"></script> <!-- Custom jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.0-10/js/fontawesome.js"></script>
+</body>
+
+</html>

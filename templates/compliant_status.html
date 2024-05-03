@@ -1,0 +1,81 @@
+<!-- event_list.html -->
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<div class="breadcrumb-area bg-image" data-bgimage="{% static 'assets/img/bg/page-banner.jpg' %}">
+ <div class="container-fluid">
+  <div class="row">
+   <div class="col-12 text-center">
+    <h2 class="page-title color--white"> Complaint Dashboard</h2>
+    <ul class="breadcrumb">
+     <li><a href="/">Home</a></li>
+     <li><a href="#"> Complaint Dashboad</a><span></span></li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</div>
+
+<!------------------------------dashboard--------------------------->
+<div class="container-fluid py-3">
+ <table class="table table-hover bg-dark">
+  <thead>
+   <thead>
+    <tr>
+     <th scope="col" class="text-white">#</th>
+     <th scope="col" class="text-white">Name</th>
+     <th scope="col" class="text-white">State</th>
+     <th scope="col" class="text-white">District</th>
+     <th scope="col" class="text-white">Village</th>
+     <th scope="col" class="text-white">Phone</th>
+     <th scope="col" class="text-white">Date</th>
+     <th scope="col" class="text-white">Image1</th>
+     <th scope="col" class="text-white">Image2</th>
+     <th scope="col" class="text-white">Image3</th>
+     <th scope="col" class="text-white">Actions</th>
+     <th scope="col" class="text-white">Compliant status</th>
+    </tr>
+   </thead>
+
+  </thead>
+  <tbody>
+   {% for event in events %}
+
+   <tr>
+    <td class="text-white">{{event.id}}</td>
+    <td class="text-white">{{event.name}}</td>
+    <td class="text-white">{{event.state}}</td>
+    <td class="text-white">{{event.district}}</td>
+    <td class="text-white">{{event.village}}</td>
+    <td class="text-white">{{event.phone}}</td>
+    <td class="text-white">{{event.date}}</td>
+    <td class="text-white">
+     <img src="{{event.image1.url}}" width="40px" height="30px" alt="image1">
+    </td>
+    <td>
+     <img src="{{event.image2.url}}" width="40px" height="30px" alt="image2" class="text-white">
+    </td>
+    <td>
+     <img src="{{event.image3.url}}" width="40px" height="30px" alt="image3" class="text-white">
+    </td>
+      <td>
+       <a href="{% url 'create_event' %}" class="text-decoration-none text-white">
+        <img src="{% static 'assets/img/icons/plus.png' %}" class="m-2 bg-white" width="14px" height="14px" alt="menu">
+        Add
+       </a>
+      </td>
+   
+
+        {% if event.status %}
+        <td><b class="text-success">Completed</b></td>
+        {% else %}
+        <td><b class="text-warning">Pending...</b></td>
+        {% endif %}
+   </tr>
+   {% endfor %}
+
+  </tbody>
+ </table>
+</div>
+{% endblock %}

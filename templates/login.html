@@ -1,0 +1,50 @@
+
+{% extends 'base2.html' %}
+
+{% block content %}
+{% load static %}
+
+<div class="wrapper">
+  <div class="logo">
+
+    {% if request.session.profile_pic %}
+    <img class="img-responsive rounded-circle" src="{{ request.session.profile_pic }}" width="80px" height="80px"
+      alt="" />
+    {% else %}
+    <!-- Add a default image or placeholder if profile_pic is not set -->
+    <div class="user_img"><img class="img-responsive" src="{%  static 'assets2/images/layout_img/user_img.jpg' %}" alt="#" />
+    </div>
+    {% endif %}
+
+  </div><br>
+  <div class="text-center mt-4 name"><br><br>
+    Welcome Back: {{request.session.username}}
+  </div>
+  <form method="post" action="{% url 'login' %}" class="p-3 mt-3">
+    {% csrf_token %}
+    {% for message in messages %}
+    <div class="alert alert-danger {{ message.tags }} alert-dismissible fade show" role="alert">
+      {{ message }}
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endfor %}
+
+    <div class="form-field d-flex align-items-center">
+      <span class="far fa-user" style="padding-left: 17px; font-size: 17px;"></span>
+
+      <input type="text" name="aadhar_no" id="aadhar_no" placeholder="aadhar no">
+    </div>
+    <div class="form-field d-flex align-items-center">
+      <span class="fas fa-key" style="padding-left: 17px; font-size: 17px;"></span>
+      <input type="password" name="password" id="password" placeholder="Password">
+    </div>
+    <button type="submit" class="btn mt-3"> User Login</button>
+  </form>
+  <div class="text-center fs-6">
+
+
+    <a href="{% url 'password_reset' %}">forgot your password</a> or <a href="{% url 'password_reset' %}">Reset
+      New</a>
+  </div>
+</div>
+{% endblock content %}

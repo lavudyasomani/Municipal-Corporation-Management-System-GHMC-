@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+<!-- Breadcrumb Start -->
+<div class="breadcrumb-area bg-image" data-bgimage="{% static 'assets/img/bg/page-banner.jpg' %}">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h2 class="page-title color--white">About</h2>
+                <ul class="breadcrumb">
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                    <li><a href="{% url 'about' %}">About</a><span></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Main Wrapper Start -->
+<main class="main-content-wrapper">
+    <!-- About Area Start -->
+    <section class="about-area">
+        <div class="container-fluid p-0">
+            <div class="row no-gutters">
+                <div class="col-lg-6">
+                    <div class="about-section">
+                        <div class=" about__content pt-5">
+                            <h2 class="about__title">About Us</h2>
+                            <div class="about__text mb--30">
+                                <p>
+                                    Municipal Corporation Management refers to the administration and governance of a municipal corporation, which is a
+                                    local government entity responsible for providing essential public services and infrastructure to residents within its
+                                    jurisdiction. Municipal corporations are typically established in urban areas and cities to manage and oversee various
+                                    aspects of local governance, including urban planning, public health, sanitation, water supply, waste management,
+                                    transportation, and other municipal services.
+                                </p>
+
+                                <p>
+                                    Effective Municipal Corporation Management requires coordination among various departments and stakeholders, transparent
+                                    governance practices, efficient service delivery mechanisms, and responsiveness to the needs and priorities of the local
+                                    population. Strong leadership, strategic planning, and effective utilization of resources are essential for ensuring the
+                                    well-being and sustainable development of urban areas under municipal corporation jurisdictions.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 pt-5">
+                    <img src="{% static 'assets/img/banner/m4.png' %}">
+                </div>
+            </div>
+            <div class="about-section">
+                <div class=" about__content">
+                    <h2 class="about__title">Why Choose Us?</h2>
+                    <div class="about__text mb--30">
+                        <p>
+                            <b>Urban Planning and Development :</b> Municipal corporations are responsible for urban planning and development activities within their jurisdiction. This
+                            includes land-use planning, zoning regulations, issuance of building permits, and ensuring compliance with building
+                            codes and regulations.<br>
+
+                            <b>Infrastructure Development:</b> Municipal corporations are tasked with the development and maintenance of essential urban infrastructure such as roads,
+                            bridges, drainage systems, street lighting, and public parks. They also oversee the construction and maintenance of
+                            public buildings and facilities like schools, hospitals, community centers, and marketplaces.<br>
+
+                            <b>Waste Management:</b> Municipal corporations are responsible for the collection, transportation, treatment, and disposal of solid waste
+                            generated within their jurisdiction. This includes household waste, commercial waste, and industrial waste. Many
+                            municipal corporations also promote recycling and waste reduction initiatives.<br>
+                            <b>Water Supply and Sewerage:</b> Ensuring a reliable and safe water supply to residents and managing sewerage systems are vital responsibilities of
+                            municipal corporations. They oversee the construction and maintenance of water supply infrastructure, such as water
+                            treatment plants, pipelines, and reservoirs, as well as sewage treatment plants and sewer networks..<br>
+
+                            
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container border">
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                            aria-selected="true">Mission</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                            aria-selected="false">Vision</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                            aria-selected="false">Core Values</button>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent" style="margin: 20px 20px 20px 20px;">
+                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                        aria-labelledby="pills-home-tab">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <p class="p"><p>
+                                    <b>Urban Planning and Development :</b> Municipal corporations are responsible for urban planning and development
+                                    activities within their jurisdiction. This
+                                    includes land-use planning, zoning regulations, issuance of building permits, and ensuring compliance with building
+                                    codes and regulations.<br>
+                                   </p>
+                                    
+                                    <p>
+                                    <b>Waste Management:</b> Municipal corporations are responsible for the collection, transportation, treatment, and
+                                    disposal of solid waste
+                                    generated within their jurisdiction. This includes household waste, commercial waste, and industrial waste. Many
+                                    municipal corporations also promote recycling and waste reduction initiatives.<br>
+                                    </p>
+
+                                   
+                                
+                                
+                                </p></p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="{% static 'assets/img/banner/m2.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <p class="p"><b>Infrastructure Development:</b> Municipal corporations are tasked with the development and maintenance of
+                                essential urban infrastructure such as roads,
+                                bridges, drainage systems, street lighting, and public parks. They also oversee the construction and maintenance of
+                                public buildings and facilities like schools, hospitals, community centers, and marketplaces.<br></p>
+
+                                <p>
+
+                                </p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="{% static 'assets/img/banner/m1.jpg' %}">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+                        <div class="row">
+                            <div class="col-md-7">
+                                <p><b>Excellence:</b> <b>Water Supply and Sewerage:</b> Ensuring a reliable and safe water supply to residents and managing sewerage
+                                systems are vital responsibilities of
+                                municipal corporations. They oversee the construction and maintenance of water supply infrastructure, such as water
+                                treatment plants, pipelines, and reservoirs, as well as sewage treatment plants and sewer networks..<br>
+                                </p>
+                            </div>
+                            <div class="col-md-5">
+                                <img src="{% static 'assets/img/banner/m3.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><br><br>
+        </div>
+    </section>
+</main>
+<!-- Main Wrapper End -->
+
+
+{% endblock %}

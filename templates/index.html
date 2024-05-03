@@ -1,0 +1,135 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+				
+<div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="single-slide slider-height bg-overlay-black d-flex align-items-center height1"
+                style="background-image: url('{% static 'assets/img/banner/m5.jpg' %}');">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 col-12">
+                            <div class="slider-content">
+                                <h1 class="mb--30 mb-xl--20" data-animation="fadeInUp" data-duration=".4s"
+                                    data-delay="1s"> Municipal_corporation_management_system
+                                    
+                                </h1>
+                                <p class="mb--25" data-animation="fadeInUp" data-duration=".4s" data-delay="1.2s">
+                                    Municipal corporations are responsible for the collection, transportation, treatment, and disposal of solid waste
+                                    generated within their jurisdiction.
+                                </p>
+                                <a href="/" class="btn btn-shape-round btn-hover-1"
+                                    data-animation="fadeInUp" data-duration=".4s" data-delay="1.4s">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="single-slide slider-height bg-overlay-black d-flex align-items-center height1"
+                style="background-image: url({% static 'assets/img/banner/m2.png' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 col-12">
+                            <div class="slider-content">
+                                <h1 class="heading__primary mb--30 mb-xl--20"><span class="heading__primary--main"
+                                        data-animation="fadeInUp" data-duration=".4s" data-delay="1s">Waste Management
+                                        </span></h1>
+                                <p class="mb--25" data-animation="fadeInUp" data-duration=".4s" data-delay="1.2s">
+                                    Essential urban infrastructure such as roads, bridges, drainage systems, street lighting, and public parks.
+                                </p>
+                                <a href="/" class="btn btn-shape-round btn-hover-1"
+                                    data-animation="fadeInUp" data-duration=".4s" data-delay="1.4s">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="single-slide slider-height bg-overlay-black d-flex align-items-center height1"
+                style="background-image: url({% static 'assets/img/banner/m6.jpg' %});">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-md-10 col-12">
+                            <div class="slider-content">
+                                <h1 class="heading__primary mb--30 mb-xl--20"><span class="heading__primary--main"
+                                        data-animation="fadeInUp" data-duration=".4s" data-delay="1s">Planning and Development:</span></h1>
+                                <p class="mb--25" data-animation="fadeInUp" data-duration=".4s" data-delay="1.2s">
+                                    Municipal corporations are responsible for urban planning and development activities within their jurisdiction.
+                                </p>
+                                <a href="/" class="btn btn-shape-round btn-hover-1" data-animation="fadeInUp"
+                                    data-duration=".4s" data-delay="1.4s">Read More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div>
+<!-- Main Wrapper Start -->
+			
+
+                <!-- About Area Start -->
+                <section class="about-area">
+                    <div class="container-fluid">
+                        <div class="row no-gutters">
+                            <div class="col-lg-6">
+                                <div class="about-section">
+                                    <div class="about__content">
+                                        <h2 class="about__title">Municipal corporations management System</h2>
+                                        <div class="about__text mb--30">
+                                            <p>Municipal Corporation Management refers to the administration and governance of a municipal corporation, which is a
+                                            local government entity responsible for providing essential public services and infrastructure to residents within its
+                                            jurisdiction. .</p>
+                                            <p>Municipal corporations are typically established in urban areas and cities to manage and oversee various
+                                            aspects of local governance, including urban planning, public health, sanitation, water supply, waste management,
+                                            transportation, and other municipal services.</p>
+                                        </div>
+                                        <a href="/" class="btn btn-shape-square">Read More</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <img src="{% static 'assets/img/bg/what-we-do.png' %}">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- About Area End -->
+                
+                
+                <!-- Feature Area End -->
+                
+                <!-- Call To Action Area Start -->
+                <section class="cta-area">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-lg-8 mb--30">
+                                <div class="section-title text-center text-lg-start">
+                                    <h2 class="color--white">Build Your Career</h2>
+                                    <p class="color--white">Municipal corporations are typically established in urban areas and cities to manage and oversee various
+                                    aspects of local governance, including urban planning, public health, sanitation, water supply, waste management,
+                                    transportation, and other municipal services..</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 text-center text-lg-end"><a href="/" class="btn">Read More</a></div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Call To Action Area End -->
+
+{% endblock %}
